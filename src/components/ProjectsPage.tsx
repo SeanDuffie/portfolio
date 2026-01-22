@@ -113,25 +113,24 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
                     variant="outline" 
                     size="sm" 
                     className="flex-1 gap-2" 
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      window.open(project.github, '_blank');
-                    }}
+                    // onClick={(e) => {e.stopPropagation(); window.open(project.github, '_blank');}}
                   >
-                    <Github className="w-4 h-4" />
-                    Code
+                    <a href=''>
+                      <Github className="w-4 h-4" />
+                      Code
+                    </a>
                   </Button>
                   {project.demo && (
                     <Button 
                       size="sm" 
                       className="flex-1 gap-2"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        window.open(project.demo, '_blank');
-                      }}
+                      // onClick={(e) => {e.stopPropagation(); window.open(project.demo, '_blank');}}
                     >
-                      <ExternalLink className="w-4 h-4" />
-                      Demo
+                      {/* TODO: Link to project demo */}
+                      <a href=''>
+                        <ExternalLink className="w-4 h-4" />
+                        Demo
+                      </a>
                     </Button>
                   )}
                 </div>

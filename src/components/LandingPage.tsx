@@ -78,12 +78,28 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
             Let's build something amazing together.
           </p>
           <div className="flex gap-3 justify-center">
-            {/* <Button size="lg" onClick={() => onNavigate('projects')}>
-              View My Work
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button> */}
-            <Button size="lg" variant="outline" className="bg-white/10 text-primary-foreground border-white/20 hover:bg-white/20">
-              Download CV
+            <Button
+              size="lg"
+              variant="outline"
+              className=" text-l bg-white/70 text-shadow-lg/10 text-primary-foreground border-white/20 hover:bg-white/20"
+              // onClick={() => onNavigate('projects')}
+              asChild
+            >
+              <a href='./projects'>
+                View My Work
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className=" text-l bg-white/70 text-shadow-lg/10 text-primary-foreground border-white/20 hover:bg-white/20"
+              asChild
+            >
+              <a target='_blank' href='./Duffie_Sean_Resume.pdf'>
+                Download CV
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
             </Button>
           </div>
         </div>
@@ -164,9 +180,15 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
           </div>
           
           <div className="text-center">
-            <Button variant="outline" onClick={() => onNavigate('projects')}>
-              View All Projects
-              <ArrowRight className="w-4 h-4 ml-2" />
+            <Button
+              variant="outline"
+              asChild
+            >
+              {/* onClick={() => onNavigate('projects')}> */}
+              <a href="./projects">
+                View All Projects
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
             </Button>
           </div>
         </div>
@@ -181,23 +203,49 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
           </p>
           
           <div className="flex justify-center gap-4 mb-8">
-            <Button variant="outline" size="lg" className="gap-2">
-              <Mail className="w-5 h-5" />
-              Email
+            <Button
+              variant="outline"
+              size="lg"
+              className="gap-2"
+              asChild
+            >
+              <a target='_blank' href='mailto:duffiesean@gmail.com'>
+                <Mail className="w-5 h-5" />
+                Email
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="gap-2">
-              <Linkedin className="w-5 h-5" />
-              LinkedIn
+            <Button
+              variant="outline"
+              size="lg"
+              className="gap-2"
+              asChild
+            >
+              <a target='_blank' href='https://www.linkedin.com/in/sean-duffie-a60509171/'>
+                <Linkedin className="w-5 h-5" />
+                LinkedIn
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="gap-2">
-              <Github className="w-5 h-5" />
-              GitHub
+            <Button
+              variant="outline"
+              size="lg"
+              className="gap-2"
+              asChild
+            >
+              <a target='_blank' href='https://github.com/SeanDuffie'>
+                <Github className="w-5 h-5" />
+                GitHub
+              </a>
             </Button>
           </div>
           
-          <Button onClick={() => onNavigate('schedule')}>
-            Schedule a Meeting
-            <Calendar className="w-4 h-4 ml-2" />
+          <Button
+            // onClick={() => onNavigate('schedule')}
+            asChild
+          >
+            <a href="./schedule">
+              Schedule a Meeting
+              <Calendar className="w-4 h-4 ml-2" />
+            </a>
           </Button>
         </div>
       </section>
