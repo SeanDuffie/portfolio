@@ -61,12 +61,14 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
                     </a>
                   </Button>
                 )}
-                <Button variant="outline" asChild>
-                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="gap-2">
-                    <Github className="w-4 h-4" />
-                    View Source Code
-                  </a>
-                </Button>
+                {project.githubLink && (
+                  <Button variant="outline" asChild>
+                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="gap-2">
+                      <Github className="w-4 h-4" />
+                      View Source Code
+                    </a>
+                  </Button>
+                )}
               </div>
             </Card>
           </div>
@@ -87,21 +89,23 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
         </div>
 
         {/* Video Demo */}
-        <Card className="p-6 mb-12 bg-secondary dark:border-gray-600">
-          <h2 className="mb-4">Demo Video</h2>
-          <div className="aspect-video bg-gray-900 rounded-lg overflow-hidden">
-            <iframe
-              width="100%"
-              height="100%"
-              src={`https://www.youtube.com/embed/${project.youtubeVideoId}`}
-              title="Project Demo"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            />
-          </div>
-        </Card>
+        {project.youtubeVideoId && (
+          <Card className="p-6 mb-12 bg-secondary dark:border-gray-600">
+            <h2 className="mb-4">Demo Video</h2>
+            <div className="aspect-video bg-gray-900 rounded-lg overflow-hidden">
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${project.youtubeVideoId}`}
+                title="Project Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </Card>
+        )}
 
         {/* Technologies */}
         <Card className="p-6 mb-12 bg-secondary dark:border-gray-600">

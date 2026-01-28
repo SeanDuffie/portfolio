@@ -1,12 +1,12 @@
 export interface Project {
-  id: number;
-  title: string;
-  subtitle: string;
-  heroImage: string;
-  description: string;
-  youtubeVideoId?: string;
-  externalLink?: string;
-  githubLink?: string;
+  id: number; // Index of the project
+  title: string; // Name of the project
+  subtitle: string; // Brief description
+  heroImage: string; // The URL of the project hero image (local path or CDN URL)
+  description: string; // A more detailed paragraph about the project
+  youtubeVideoId?: string; // (Optional) The YouTube video ID to append to the link
+  externalLink?: string; // (Optional) A link to a demo or more detailed page
+  githubLink?: string; // (Optional) A link to the associated git repo, if open source
   technologies: {
     category: string;
     tools: string[];
@@ -23,29 +23,68 @@ export interface Project {
   tags: string[]; // Added this based on your LandingPage.tsx needs
 }
 
+export const categories = ['all', 'web-app', 'PCB', 'Image Processing', 'personal'];
+
 export const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Portfolio Webpage",
     subtitle:
-      "Full-stack online shopping experience with modern payment integration",
-    heroImage:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?w=1200",
+      "Fast and Responsive website using astro to display my Engineering Portfolio and other career ",
+    heroImage: "./img/23-05-12_SMD_TAMU_GradPix_035_b.jpg",
     description: "A comprehensive e-commerce platform built with Next.js...",
     youtubeVideoId: "dQw4w9WgXcQ",
-    externalLink: "https://demo.example.com",
-    githubLink: "https://github.com/username/ecommerce",
-    tags: ["Next.js", "TypeScript", "Stripe"],
+    externalLink: "https://astro-portfolio-sean-duffie.vercel.app/",
+    githubLink: "https://github.com/SeanDuffie/astro-portfolio",
+    tags: ["Astro", "TypeScript", "Svelte", "ReactJS"],
     technologies: [
       {
         category: "Frontend",
         tools: [
-          "Next.js 14",
+          "Astro",
           "TypeScript",
           "Tailwind CSS",
-          "React Query",
-          "Zustand",
+          "JavaScript",
+          "ReactJS",
+          "Svelte",
         ],
+      },
+    ],
+    timeline: [
+      {
+        phase: "Planning & Design",
+        date: "Jan 2024",
+        description: "Requirements gathering...",
+        status: "completed",
+      },
+    ],
+    challenges: ["Learning Astro", "PCI compliance"],
+    outcomes: ["Processed 10k orders", "99.9% uptime"],
+    team: ["Solo"],
+  },
+  {
+    id: 2,
+    title: "Wordle Discord Bot",
+    subtitle:
+      "Automatic Wordle solver that has an option to integrate into a Discord Server",
+    heroImage: "./img/wordle_example.png",
+    description: "A comprehensive e-commerce platform built with Next.js...",
+    // youtubeVideoId: null, // dQw4w9WgXcQ
+    // externalLink: null,
+    // githubLink: null,
+    tags: [
+      "Python",
+      "OpenCV",
+      "Selenium",
+      "BeautifulSoup",
+      "SQL",
+      "Pandas",
+      "Discord API",
+    ],
+    technologies: [
+      {
+        category: "Frontend",
+        tools: ["Discord API"],
       },
       // ... fill in the rest of your data here
     ],
@@ -59,9 +98,116 @@ export const projects: Project[] = [
     ],
     challenges: ["Inventory synchronization", "PCI compliance"],
     outcomes: ["Processed 10k orders", "99.9% uptime"],
-    team: ["Lead Developer", "UI/UX Designer"],
+    team: ["Solo"],
   },
-  // ... Add Project 2 and 3 here
+  {
+    id: 3,
+    title: "Portfolio Webpage",
+    subtitle:
+      "Fast and Responsive website using astro to display my Engineering Portfolio and other career ",
+    heroImage: "./img/23-05-12_SMD_TAMU_GradPix_035_b.jpg",
+    description: "A comprehensive e-commerce platform built with Next.js...",
+    // youtubeVideoId: null,
+    // externalLink: null,
+    // githubLink: null,
+    tags: ["Astro", "TypeScript", "Svelte", "ReactJS"],
+    technologies: [
+      {
+        category: "Frontend",
+        tools: [
+          "Astro",
+          "TypeScript",
+          "Tailwind CSS",
+          "JavaScript",
+          "ReactJS",
+          "Svelte",
+        ],
+      },
+    ],
+    timeline: [
+      {
+        phase: "Planning & Design",
+        date: "Jan 2024",
+        description: "Requirements gathering...",
+        status: "completed",
+      },
+    ],
+    challenges: ["Inventory synchronization", "PCI compliance"],
+    outcomes: ["Processed 10k orders", "99.9% uptime"],
+    team: ["Solo"],
+  },
+  {
+    id: 4,
+    title: "Portfolio Webpage",
+    subtitle:
+      "Fast and Responsive website using astro to display my Engineering Portfolio and other career ",
+    heroImage: "./img/23-05-12_SMD_TAMU_GradPix_035_b.jpg",
+    description: "A comprehensive e-commerce platform built with Next.js...",
+    // youtubeVideoId: null, // dQw4w9WgXcQ
+    // externalLink: null,
+    // githubLink: null,
+    tags: ["Astro", "TypeScript", "Svelte", "ReactJS"],
+    technologies: [
+      {
+        category: "Frontend",
+        tools: [
+          "Astro",
+          "TypeScript",
+          "Tailwind CSS",
+          "JavaScript",
+          "ReactJS",
+          "Svelte",
+        ],
+      },
+    ],
+    timeline: [
+      {
+        phase: "Planning & Design",
+        date: "Jan 2024",
+        description: "Requirements gathering...",
+        status: "completed",
+      },
+    ],
+    challenges: ["Inventory synchronization", "PCI compliance"],
+    outcomes: ["Processed 10k orders", "99.9% uptime"],
+    team: ["Solo"],
+  },
+  {
+    id: 5,
+    title: "Portfolio Webpage",
+    subtitle:
+      "Fast and Responsive website using astro to display my Engineering Portfolio and other career ",
+    heroImage: "./img/23-05-12_SMD_TAMU_GradPix_035_b.jpg",
+    description: "A comprehensive e-commerce platform built with Next.js...",
+    // youtubeVideoId: null, // dQw4w9WgXcQ
+    // externalLink: null,
+    // githubLink: null,
+    tags: ["Astro", "TypeScript", "Svelte", "ReactJS"],
+    technologies: [
+      {
+        category: "Frontend",
+        tools: [
+          "Astro",
+          "TypeScript",
+          "Tailwind CSS",
+          "JavaScript",
+          "ReactJS",
+          "Svelte",
+        ],
+      },
+    ],
+    timeline: [
+      {
+        phase: "Planning & Design",
+        date: "Jan 2024",
+        description: "Requirements gathering...",
+        status: "completed",
+      },
+    ],
+    challenges: ["Inventory synchronization", "PCI compliance"],
+    outcomes: ["Processed 10k orders", "99.9% uptime"],
+    team: ["Solo"],
+  },
 ];
 
 // Helper to find a project by ID (useful for dynamic routing)

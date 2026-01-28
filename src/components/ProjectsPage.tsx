@@ -4,12 +4,11 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import { projects } from '@/data/projects';
+import { projects, categories} from '@/data/projects';
 
 export function ProjectsPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const categories = ['all', 'web-app', 'mobile', 'open-source', 'personal'];
 
   const filteredProjects = projects.filter((project) => {
     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -79,7 +78,7 @@ export function ProjectsPage() {
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="flex-1 text-foreground">{project.title}</h3>
-                    <span className="text-xs text-muted-foreground ml-2">{project.year}</span>
+                    {/* <span className="text-xs text-muted-foreground ml-2">{project.year}</span> */}
                   </div>
                   
                   <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
@@ -100,13 +99,15 @@ export function ProjectsPage() {
                   </div>
                   
                   <div className="flex gap-2">
-                    <Button asChild variant="outline" size="sm" className="flex-1 gap-2">
-                      <a href={project.githubLink}>
-                        <Github className="w-4 h-4" />
-                        Code
-                      </a>
-                    </Button>
-                    {project.demo && (
+                    {project.githubLink && (
+                      <Button asChild variant="outline" size="sm" className="flex-1 gap-2">
+                        <a href={project.githubLink}>
+                          <Github className="w-4 h-4" />
+                          Code
+                        </a>
+                      </Button>
+                    )}
+                    {project.externalLink && (
                       <Button asChild size="sm" className="flex-1 gap-2">
                         <a href={project.externalLink}>
                           <ExternalLink className="w-4 h-4" />
