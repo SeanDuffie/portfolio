@@ -2,6 +2,7 @@
 import { Github, Linkedin, Mail, ExternalLink, ArrowRight, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { projects } from '@/data/projects';
 
 interface LandingPageProps {
   onNavigate: (page: string) => void;
@@ -12,26 +13,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
   // const scrollY = 0.
 
   /** FIXME: Move this to a consolidated projects file. */
-  const featuredProjects = [
-    {
-      id: 1,
-      title: 'E-Commerce Platform',
-      description: 'Full-stack application with Next.js and Stripe integration',
-      tags: ['Next.js', 'TypeScript', 'Stripe'],
-    },
-    {
-      id: 2,
-      title: 'AI Chat Application',
-      description: 'Real-time chat with AI-powered responses',
-      tags: ['React', 'WebSocket', 'OpenAI'],
-    },
-    {
-      id: 3,
-      title: 'Analytics Dashboard',
-      description: 'Data visualization platform for business metrics',
-      tags: ['React', 'D3.js', 'PostgreSQL'],
-    },
-  ];
+  const featuredProjects = projects.slice(0, 3);
 
   return (
     <div className="min-h-screen">
