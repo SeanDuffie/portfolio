@@ -31,7 +31,7 @@ export const projects: Project[] = [
     title: "Portfolio Webpage",
     subtitle:
       "Fast and Responsive website using astro to display my Engineering Portfolio and other career ",
-    heroImage: "./img/23-05-12_SMD_TAMU_GradPix_035_b.jpg",
+    heroImage: "./img/23-05-12_SMD_TAMU_GradPix_035_b_lossy80.webp",
     description: "A comprehensive e-commerce platform built with Next.js...",
     youtubeVideoId: "dQw4w9WgXcQ",
     externalLink: "https://astro-portfolio-sean-duffie.vercel.app/",

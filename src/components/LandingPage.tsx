@@ -3,6 +3,7 @@ import { Github, Linkedin, Mail, ExternalLink, ArrowRight, Calendar } from 'luci
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { projects } from '@/data/projects';
+import { landing } from '@/data/landing';
 
 interface LandingPageProps {
   onNavigate: (page: string) => void;
@@ -10,9 +11,6 @@ interface LandingPageProps {
 
 export function LandingPage({ onNavigate }: LandingPageProps) {
 
-  // const scrollY = 0.
-
-  /** FIXME: Move this to a consolidated projects file. */
   const featuredProjects = projects.slice(0, 3);
 
   return (
@@ -21,50 +19,33 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/img/23-05-12_SMD_TAMU_GradPix_035_b.jpg"
+            src={landing.heroPath}
             alt="Hero background"
             className="w-full h-full object-cover"
-            style={{
-              // transform: `translateY(${Math.min(scrollY*0.5, (typeof window !== 'undefined' ? window.innerHeight : 1000) * .9)}px)`,
+            // style={{
+            //   transform: `translateY(${Math.min(scrollY*0.5, (typeof window !== 'undefined' ? window.innerHeight : 1000) * .9)}px)`,
             //   transition: 'transform 0.1s ease-out',
-              // scrollBehavior: 'smooth',
-            }}
-            // loading='lazy'
+            //   scrollBehavior: 'smooth',
+            // }}
+            fetchPriority='high'
           />
-
-            {/* <img
-                src="/img/23-05-12_SMD_TAMU_GradPix_035_b.jpg"
-                alt="Hero background"
-                // 'sticky' keeps it pinned. 'top-0' sets the pin position.
-                // className="sticky top-0 w-full h-screen object-cover -z-10"
-                className="
-                    fixed
-                    h-[90vh] w-full
-                    object-cover
-                "
-            /> */}
-
           {/** Sets the gradient overlay over the hero image */}
-          <div className="absolute inset-0"/>
+          <div className="absolute inset-0 bg-linear-to-r from-(--background) to-(--background/20)"/>
            {/* bg-gradient-to-b from-black/60 via-black/40 to-white" /> */}
         </div>
         
         <div className="relative z-10 text-shadow-lg/90 text-center px-4 max-w-5xl mx-auto">
-            {/* FIXME: Make the text much bigger, constant white, animate? */}
-          <h1 className="text-6xl text-white mb-4 font-serif">
-            Howdy, I'm Sean Duffie!
+          <h1 className="text-6xl text-white mb-4 font-serif font-extrabold">
+            {landing.heading}
           </h1>
-          <p className="text-2xl text-shadow-lg/90 text-white/90 mb-8 font-serif">
-            {/* FIXME: Make the text much bigger, constant white, animate? */}
-            I'm an Embedded Software Engineer with a passion for optimization and innovation.<br/>
-            Let's build something amazing together.
+          <p className="text-2xl text-shadow-lg/90 text-white/90 mb-8 font-serif font-bold">
+            {landing.subHeading}
           </p>
           <div className="flex gap-3 justify-center">
             <Button
               size="lg"
               variant="outline"
-              className=" text-l bg-white/70 text-shadow-lg/90 text-white border-white/20 hover:bg-white/20"
-              // onClick={() => onNavigate('projects')}
+              className="bg-primary/20 hover:bg-primary/70 border-white/20 text-l text-white/80 hover:text-white text-shadow-lg/90 font-semibold"
               asChild
             >
               <a href='./projects'>
@@ -75,10 +56,10 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
             <Button
               size="lg"
               variant="outline"
-              className=" text-l bg-white/70 text-shadow-lg/90 text-white border-white/90 hover:bg-white/20"
+              className="bg-primary/20 hover:bg-primary/70 border-white/20 text-l text-white/80 hover:text-white text-shadow-lg/90 font-semibold"
               asChild
             >
-              <a target='_blank' href='./Duffie_Sean_Resume.pdf'>
+              <a target='_blank' href={landing.resumePath}>
                 Download CV
                 <ArrowRight className="w-4 h-4 stroke-4 ml-2" />
               </a>
@@ -93,35 +74,28 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
           <h2 className="mb-8 text-center text-foreground">About Me</h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <p className="mb-4 dark:text-gray-300">
-                I'm a passionate full-stack developer with 5+ years of experience building web applications. 
-                I specialize in creating scalable, user-friendly solutions using modern technologies.
-              </p>
-              <p className="mb-4 dark:text-gray-300">
-                My expertise lies in React, Next.js, TypeScript, and Node.js. I'm constantly learning 
-                and staying up-to-date with the latest trends in web development.
-              </p>
-              <p className="dark:text-gray-300">
-                When I'm not coding, you can find me contributing to open-source projects, writing 
-                technical blog posts, or exploring new technologies.
-              </p>
+              {landing.aboutMe.map((paragraph) => (
+                <p key={paragraph} className="mb-4 text-gray-300">
+                  {paragraph}
+                </p>
+              ))}
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <Card className="p-6 text-center bg-secondary dark:border-gray-600">
-                <div className="text-3xl mb-2 text-foreground">4+</div>
-                <div className="text-sm text-muted-foreground dark:text-gray-300">Years Experience</div>
+              <Card className="p-6 text-center bg-secondary border-gray-600">
+                <div className="text-3xl mb-2 text-foreground">5+</div>
+                <div className="text-sm text-muted-foreground text-gray-300">Years Experience</div>
               </Card>
-              <Card className="p-6 text-center bg-secondary dark:border-gray-600">
+              <Card className="p-6 text-center bg-secondary border-gray-600">
                 <div className="text-3xl mb-2 text-foreground">50+</div>
-                <div className="text-sm text-muted-foreground dark:text-gray-300">Projects Completed</div>
+                <div className="text-sm text-muted-foreground text-gray-300">Projects Completed</div>
               </Card>
-              <Card className="p-6 text-center bg-secondary dark:border-gray-600">
+              <Card className="p-6 text-center bg-secondary border-gray-600">
                 <div className="text-3xl mb-2 text-foreground">10+</div>
-                <div className="text-sm text-muted-foreground dark:text-gray-300">Happy Clients</div>
+                <div className="text-sm text-muted-foreground text-gray-300">Happy Clients</div>
               </Card>
-              <Card className="p-6 text-center bg-secondary dark:border-gray-600">
+              <Card className="p-6 text-center bg-secondary border-gray-600">
                 <div className="text-3xl mb-2 text-foreground">3</div>
-                <div className="text-sm text-muted-foreground dark:text-gray-300">Certifications</div>
+                <div className="text-sm text-muted-foreground text-gray-300">Certifications</div>
               </Card>
             </div>
           </div>
@@ -134,42 +108,45 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
           <div className="text-center mb-12">
             <h2 className="mb-4 text-primary">Featured Projects</h2>
             <p className="text-muted-foreground">
-              Here are some of my recent works that showcase my skills and experience
+              {landing.featuredIntro}
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {featuredProjects.map((project) => (
-              <Card key={project.id} className="p-6 hover:shadow-lg transition-shadow bg-card dark:border-gray-700">
-                {/* FIXME: Update the top left image to be a logo or profile picture */}
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg mb-4 flex items-center justify-center">
-                  <ExternalLink className="w-6 h-6 text-foreground" />
-                </div>
-                <h3 className="mb-2 text-foreground">{project.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-1 bg-primary text-primary-foreground rounded text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              <Card key={project.id} className="p-6 transition-shadow bg-card/80 hover:bg-card hover:shadow-xl border-gray-700">
+                <a href={`./projects/${project.id}`}>
+                  {/* FIXME: Update the top left image to be a logo or profile picture */}
+                  <div className="w-12 h-12 bg-accent rounded-lg mb-4 flex items-center justify-center">
+                    <ExternalLink className="w-6 h-6 text-foreground" />
+                  </div>
+                  <h3 className="mb-2 text-foreground">{project.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-1 bg-secondary text-primary rounded text-xs"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </a>
               </Card>
             ))}
           </div>
           
           <div className="text-center">
             <Button
-              variant="outline"
+              variant="default"
+              size="lg"
+              className='bg-background/60 hover:bg-background border-background/80 text-l text-white/80 hover:text-white text-shadow-lg/90 font-semibold'
               asChild
             >
-              {/* onClick={() => onNavigate('projects')}> */}
               <a href="./projects">
                 View All Projects
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-4 h-4 stroke-4 ml-2" />
               </a>
             </Button>
           </div>
@@ -177,21 +154,21 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-4 bg-background transition-colors duration-200">
+      <section className="py-16 px-4 transition-colors duration-200">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="mb-4 dark:text-foreground">Let's Connect</h2>
+          <h2 className="mb-4 text-foreground">Let's Connect</h2>
           <p className="text-muted-foreground mb-8">
-            Feel free to reach out for collaborations or just a friendly hello
+            {landing.contactIntro}
           </p>
           
-          <div className="flex justify-center gap-4 mb-8">
+          <div className="flex justify-center gap-4 mb-8 text-white/80 hover:text-white text-shadow-lg/90 font-semibold">
             <Button
               variant="outline"
               size="lg"
               className="gap-2"
               asChild
             >
-              <a target='_blank' href='mailto:duffiesean@gmail.com'>
+              <a target='_blank' href={`mailto:${landing.email}`}>
                 <Mail className="w-5 h-5" />
                 Email
               </a>
@@ -202,7 +179,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
               className="gap-2"
               asChild
             >
-              <a target='_blank' href='https://www.linkedin.com/in/sean-duffie-a60509171/'>
+              <a target='_blank' href={landing.linkedin}>
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
               </a>
@@ -213,7 +190,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
               className="gap-2"
               asChild
             >
-              <a target='_blank' href='https://github.com/SeanDuffie'>
+              <a target='_blank' href={landing.github}>
                 <Github className="w-5 h-5" />
                 GitHub
               </a>
@@ -221,7 +198,9 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
           </div>
           
           <Button
-            // onClick={() => onNavigate('schedule')}
+            variant="outline"
+            size="lg"
+            className='text-white/80 hover:text-white text-shadow-lg/90 font-semibold'
             asChild
           >
             <a href="./schedule">
