@@ -5,123 +5,88 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-:root {/* LIGHT MODE */
-  /* Background: Very subtle warm white to match the earthy tone */
+:root {
+  /* LIGHT MODE */
+  /* Background: A very warm, dusty white (Rose White) */
   --background: 0 20% 99%;
-  /* Foreground: Deep, almost black version of your primary */
-  --foreground: 0 20% 15%;
+  /* Foreground: Deep Maroon-Black for text (High Contrast) */
+  --foreground: 355 30% 15%;
 
-  /* Card: White stands out cleanly against the warm background */
+  /* Card: Pure white to pop against the warm background */
   --card: 0 0% 100%;
-  --card-foreground: 0 20% 15%;
+  --card-foreground: 355 30% 15%;
 
-  /* Popover: Matches Card */
   --popover: 0 0% 100%;
-  --popover-foreground: 0 20% 15%;
+  --popover-foreground: 355 30% 15%;
 
-  /* Primary: Your brand color #604040 (HSL: 0, 20%, 31%) */
-  --primary: 0 20% 31%;
-  --primary-foreground: 0 20% 98%;
-  /* White text on buttons */
+  /* PRIMARY: Deep Maroon (Brand Anchor) */
+  /* HSL 355, 75%, 25% is a rich, blood-red maroon */
+  --primary: 355 75% 25%;
+  /* Text on Primary: Pure White */
+  --primary-foreground: 0 0% 100%;
 
-  /* Secondary: A very light wash of your primary for subtle buttons */
-  --secondary: 0 20% 94%;
-  --secondary-foreground: 0 20% 31%;
+  /* SECONDARY: A light dusty rose wash */
+  --secondary: 355 30% 94%;
+  --secondary-foreground: 355 75% 25%;
 
-  /* Muted: Grayish-red for disabled states or subtle text */
-  --muted: 0 20% 94%;
-  --muted-foreground: 0 10% 45%;
+  /* MUTED: Warm Grey for subtext */
+  --muted: 355 20% 94%;
+  --muted-foreground: 355 10% 45%;
 
-  /* Accent: Used for hover states on dropdowns/lists */
-  --accent: 0 20% 94%;
-  --accent-foreground: 0 20% 31%;
+  /* ACCENT: Used for hover states */
+  --accent: 355 30% 90%;
+  --accent-foreground: 355 75% 25%;
 
-  /* Destructive: Standard Red, slightly desaturated to match theme */
+  /* DESTRUCTIVE: Standard Red */
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
 
-  /* Border: Subtle warm gray */
-  --border: 0 10% 88%;
-  --input: 0 10% 88%;
-  --ring: 0 20% 31%;
-  /* Focus ring matches primary */
+  /* BORDER: Warm Rose-Grey */
+  --border: 355 20% 90%;
+  --input: 355 20% 90%;
+  --ring: 355 75% 25%;
 
   --radius: 0.5rem;
-  /* --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 222.2 84% 4.9%;
-  --radius: 0.5rem; */
 }
 
-.dark {/* DARK MODE */
-  /* Background: Very dark, warm brown-black (#1C1616) */
-  --background: 0 12% 10%;
-  /* Foreground: Soft off-white (#EEE5E5) */
-  --foreground: 0 15% 92%;
+.dark {
+  /* DARK MODE */
+  /* Background: Deep, rich Chocolate-Black (Not pure black) */
+  --background: 355 25% 10%;
+  /* Foreground: Soft Rose-White */
+  --foreground: 355 20% 96%;
 
-  /* Card: Slightly lighter than background to create depth (#261E1E) */
-  --card: 0 12% 13%;
-  --card-foreground: 0 15% 92%;
+  /* Card: Slightly lighter maroon-black for depth */
+  --card: 355 25% 13%;
+  --card-foreground: 355 20% 96%;
 
-  --popover: 0 12% 13%;
-  --popover-foreground: 0 15% 92%;
+  --popover: 355 25% 13%;
+  --popover-foreground: 355 20% 96%;
 
-  /* Primary: Lightened to Rosy Taupe (#A88888) for visibility on dark */
-  --primary: 0 15% 60%;
-  --primary-foreground: 0 12% 10%;
-  /* Dark text on the light button */
+  /* PRIMARY: Pale Rose / Mauve */
+  /* WE FLIP THE SCRIPT: To stand out on dark background, the primary 
+     action color must be light. We use a pastel pink/maroon tint. */
+  --primary: 355 50% 80%;
 
-  /* Secondary: Darker mute (#382B2B) */
-  --secondary: 0 12% 20%;
-  --secondary-foreground: 0 15% 92%;
+  /* Text on Primary: The Deep Maroon from Light Mode (Links the brand identity) */
+  --primary-foreground: 355 75% 25%;
 
-  --muted: 0 12% 20%;
-  --muted-foreground: 0 10% 65%;
+  /* SECONDARY: Deep Muted Maroon */
+  --secondary: 355 30% 20%;
+  --secondary-foreground: 355 20% 96%;
 
-  --accent: 0 12% 20%;
-  --accent-foreground: 0 15% 92%;
+  --muted: 355 30% 20%;
+  --muted-foreground: 355 10% 70%;
+
+  --accent: 355 30% 25%;
+  --accent-foreground: 355 50% 80%;
 
   --destructive: 0 62% 30%;
-  --destructive-foreground: 0 15% 92%;
+  --destructive-foreground: 0 20% 96%;
 
-  --border: 0 12% 20%;
-  --input: 0 12% 20%;
-  --ring: 0 15% 60%;
-  /* --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 212.7 26.8% 83.9%; */
+  --border: 355 30% 20%;
+  --input: 355 30% 20%;
+  --ring: 355 50% 80%;
 }
 
 /* This @theme block replaces tailwind.config.mjs! */
