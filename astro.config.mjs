@@ -11,9 +11,15 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://seanduffie.vercel.app/',
+  site: "https://seanduffie.vercel.app/",
   integrations: [svelte(), react(), sitemap()],
+  build: {
+    inlineStylesheets: "auto",
+  },
   vite: {
-    plugins: [tailwind()]
-  }
+    plugins: [tailwind()],
+    build: {
+      assetsInlineLimit: 20480, // 20kb in bytes
+    }
+  },
 });
