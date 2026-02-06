@@ -49,7 +49,7 @@
     <div class="flex items-center justify-between h-16">
       
       <a href="/" class="flex items-center gap-2 text-foreground no-underline">
-        <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg"> </div>
+        <!-- <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg"> </div> -->
         <span class="font-semibold">Portfolio</span>
       </a>
 
@@ -57,7 +57,7 @@
         {#each navItems as item}
           <a
             href={item.href}
-            class="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-md hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            class="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-md bg-secondary/40 hover:bg-secondary/90 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             class:bg-secondary={isActive(item.href)}
           >
             <svelte:component this={item.icon} class="w-4 h-4" />
