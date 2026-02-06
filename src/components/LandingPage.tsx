@@ -30,7 +30,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
             fetchPriority='high'
           />
           {/** Sets the gradient overlay over the hero image */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-white" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent from-95% to-background" />
         </div>
         
         <div className="relative z-10 text-shadow-lg/90 text-center px-4 max-w-5xl mx-auto">
@@ -102,7 +102,10 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-20 px-4 bg-secondary">
+      <section className="relative py-20 px-4 bg-secondary">
+        {/* Top Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background from-0% to-5% to-transparent" />
+
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="mb-4 text-primary">Featured Projects</h2>
@@ -150,6 +153,9 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
             </Button>
           </div>
         </div>
+
+        {/* Bottom Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent from-95% to-background" />
       </section>
 
       {/* Contact Section */}
@@ -178,7 +184,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
               className="gap-2"
               asChild
             >
-              <a target='_blank' href={landing.linkedin}>
+              <a rel="preload" target='_blank' href={landing.linkedin}>
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
               </a>
@@ -189,7 +195,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
               className="gap-2"
               asChild
             >
-              <a target='_blank' href={landing.github}>
+              <a rel="preload" target='_blank' href={landing.github}>
                 <Github className="w-5 h-5" />
                 GitHub
               </a>
