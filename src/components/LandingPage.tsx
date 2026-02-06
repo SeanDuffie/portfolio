@@ -63,24 +63,24 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
             <Button
               size="lg"
               variant="outline"
-              className=" text-l bg-white/70 text-shadow-lg/10 text-primary-foreground border-white/20 hover:bg-white/20"
+              className=" text-l bg-white/70 text-shadow-lg/90 text-white border-white/20 hover:bg-white/20"
               // onClick={() => onNavigate('projects')}
               asChild
             >
               <a href='./projects'>
                 View My Work
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-4 h-4 stroke-4 ml-2" />
               </a>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className=" text-l bg-white/70 text-shadow-lg/10 text-primary-foreground border-white/20 hover:bg-white/20"
+              className=" text-l bg-white/70 text-shadow-lg/90 text-white border-white/90 hover:bg-white/20"
               asChild
             >
               <a target='_blank' href='./Duffie_Sean_Resume.pdf'>
                 Download CV
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-4 h-4 stroke-4 ml-2" />
               </a>
             </Button>
           </div>
@@ -132,7 +132,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
       <section className="py-20 px-4 bg-secondary">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="mb-4 dark:text-primary-foreground">Featured Projects</h2>
+            <h2 className="mb-4 text-primary">Featured Projects</h2>
             <p className="text-muted-foreground">
               Here are some of my recent works that showcase my skills and experience
             </p>
