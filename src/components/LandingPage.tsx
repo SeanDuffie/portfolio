@@ -30,8 +30,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
             fetchPriority='high'
           />
           {/** Sets the gradient overlay over the hero image */}
-          <div className="absolute inset-0 bg-linear-to-r from-(--background) to-(--background/20)"/>
-           {/* bg-gradient-to-b from-black/60 via-black/40 to-white" /> */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-white" />
         </div>
         
         <div className="relative z-10 text-shadow-lg/90 text-center px-4 max-w-5xl mx-auto">
@@ -208,6 +207,9 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
               <Calendar className="w-4 h-4 ml-2" />
             </a>
           </Button>
+          <p className="mt-4 text-sm text-muted-foreground">
+            &copy; {landing.currentYear} Sean Duffie. All rights reserved.
+          </p>
         </div>
       </section>
     </div>
