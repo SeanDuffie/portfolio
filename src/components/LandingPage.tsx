@@ -16,7 +16,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden font-serif">
         <div className="absolute inset-0 z-0">
           <img
             src={landing.heroPath}
@@ -34,10 +34,10 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
         </div>
         
         <div className="relative z-10 text-shadow-lg/90 text-center px-4 max-w-5xl mx-auto">
-          <h1 className="text-6xl text-white mb-4 font-serif font-extrabold">
+          <h1 className="text-6xl text-white mb-4 font-extrabold">
             {landing.heading}
           </h1>
-          <p className="text-2xl text-shadow-lg/90 text-white/90 mb-8 font-serif font-bold">
+          <p className="text-2xl text-shadow-lg/90 text-white/90 mb-8 font-bold">
             {landing.subHeading}
           </p>
           <div className="flex gap-3 justify-center">
@@ -68,9 +68,9 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 font-serif">
         <div className="max-w-4xl mx-auto">
-          <h2 className="mb-8 text-center text-foreground">About Me</h2>
+          <h2 className="mb-4 text-center text-foreground text-xl font-extrabold">About Me</h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               {landing.aboutMe.map((paragraph) => (
@@ -102,13 +102,13 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
       </section>
 
       {/* Featured Projects */}
-      <section className="relative py-20 px-4 bg-secondary">
+      <section className="relative py-20 px-4 bg-secondary font-serif">
         {/* Top Gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-background from-0% to-5% to-transparent" />
 
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="mb-4 text-primary">Featured Projects</h2>
+            <h2 className="mb-4 text-primary text-center text-xl font-extrabold">Featured Projects</h2>
             <p className="text-muted-foreground">
               {landing.featuredIntro}
             </p>
@@ -159,9 +159,9 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-4 transition-colors duration-200">
+      <section className="py-16 px-4 transition-colors duration-200 font-serif">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="mb-4 text-foreground">Let's Connect</h2>
+          <h2 className="mb-4 text-center text-foreground text-xl font-extrabold">Let's Connect</h2>
           <p className="text-muted-foreground mb-8">
             {landing.contactIntro}
           </p>
