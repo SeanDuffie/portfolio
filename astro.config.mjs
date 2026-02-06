@@ -7,10 +7,12 @@ import tailwind from '@tailwindcss/vite';
 
 import react from '@astrojs/react';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [svelte(), react()],
-
+  site: 'https://seanduffie.vercel.app/',
+  integrations: [svelte(), react(), sitemap()],
   vite: {
     plugins: [tailwind()]
   }
