@@ -25,7 +25,7 @@ export const landing: LandingPage = {
   iconPath: "/img/Hawaii Icon 1.webp", // FIXME: This is not currently being used
   pageTitle: "Sean Duffie | Portfolio",
 
-  heroPath: "/img/23-05-12_SMD_TAMU_GradPix_035_b.jpg",
+  heroPath: "/img/23-05-12_SMD_TAMU_GradPix_035_b_lossy80.webp",
   heading: "Howdy, I'm Sean Duffie!",
   subHeading:
     "I\'m an Embedded Software Engineer with a passion for optimization and innovation.</br>Let\'s build something amazing together.",
@@ -48,35 +48,3 @@ export const landing: LandingPage = {
   linkedin: "https://www.linkedin.com/in/sean-duffie",
   currentYear: "2026",
 }; 
-
-export const SITE_DATA = {
-  // Global settings
-  general: {
-    title: "My Portfolio",
-    baseUrl: "https://mysite.com",
-    logoText: "JD.",
-  },
-  // Navigation Links (used in Navbar across all pages)
-  navigation: [
-    { label: "Home", href: "/" },
-    { label: "Projects", href: "/projects" },
-    { label: "About", href: "/about" },
-  ],
-  // Shared Image Paths
-  images: {
-    heroBackground: "/img/23-05-12_SMD_TAMU_GradPix_035_b.jpg",
-    profileAvatar: "/img/avatar.jpg",
-  },
-  // Content for specific sections
-  hero: {
-    heading: "Building for the Web",
-    subHeading: "Specializing in React & Embedded Systems",
-  },
-  footer: {
-    copyright: `© ${new Date().getFullYear()} Jane Doe`,
-    socials: {
-      github: "https://github.com/...",
-      linkedin: "https://linkedin.com/...",
-    },
-  },
-};
