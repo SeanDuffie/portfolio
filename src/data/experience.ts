@@ -17,6 +17,20 @@ export interface Experience {
 
 export const experience: Experience[] = [
   {
+    id: 7,
+    startYear: 2026,
+    startMonth: 8,
+    city: "Huntsville",
+    state: "AL",
+    companyName: "Leidos",
+    positionName: "C++ Software Engineer",
+    description: "TODO: Description for my current role at Leidos.",
+    responsibilities: [
+      "Being freaking cool and doing cool stuff with C++ at Leidos.",
+    ],
+    skills: ["C++", "Embedded Systems"],
+  },
+  {
     id: 6,
     startYear: 2026,
     startMonth: 2,
@@ -26,9 +40,12 @@ export const experience: Experience[] = [
     state: "AL",
     companyName: "Insight Global",
     positionName: "C++ Software Engineer",
-    description: "Working for Leidos through Insight Global as a contract-to-hire.",
-    responsibilities: [],
-    skills: [],
+    description:
+      "Working for Leidos through Insight Global as a contract-to-hire.",
+    responsibilities: [
+      "Being freaking cool and doing cool stuff with C++ at Leidos.",
+    ],
+    skills: ["C++", "Embedded Systems"],
   },
   {
     id: 5,
@@ -54,7 +71,8 @@ export const experience: Experience[] = [
     state: "GA",
     companyName: "Insight Global",
     positionName: "Software Research Engineer I",
-    description: "Working for GTRI through Insight Global as a contract-to-hire.",
+    description:
+      "Working for GTRI through Insight Global as a contract-to-hire.",
     responsibilities: [],
     skills: [],
   },
@@ -101,8 +119,6 @@ export const experience: Experience[] = [
     responsibilities: [
       "Diagnosed and documented issues with laptops that were checked in to us for repair or maintenance.",
     ],
-    skills: [
-      "Debugging"
-    ],
+    skills: ["Debugging"],
   },
 ];

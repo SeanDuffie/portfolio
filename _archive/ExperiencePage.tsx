@@ -14,7 +14,7 @@ export function ExperiencePage() {
   ];
 
   return (
-    <div className="min-h-screen py-24 px-4">
+    <div className="min-h-screen py-24 px-4 font-serif">
       <div className="max-w-5xl mx-auto">
         <div className="mb-12 text-center">
           <h1 className="mb-4 text-foreground">Experience & Education</h1>

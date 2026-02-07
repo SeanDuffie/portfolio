@@ -2,6 +2,7 @@
 // src/layouts/Layout.astro
 import "@/styles/globals.css";
 import Navigation from "@/components/Navigation.svelte"; // Assuming you port Nav to Svelte
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 
 const { title } = Astro.props;
 const currentPath = Astro.url.pathname; // Gets the current URL (e.g., "/projects")

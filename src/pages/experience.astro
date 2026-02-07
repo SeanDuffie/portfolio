@@ -1,8 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { ExperiencePage } from "@/components/ExperiencePage"; // Update path if needed!
+import ExperiencePage from "@/components/ExperiencePage.svelte"; // Update path if needed!
 ---
 
 <Layout title="Experience | Sean Duffie">
-  <ExperiencePage client:idle />
+  <ExperiencePage client:visible />
 </Layout>

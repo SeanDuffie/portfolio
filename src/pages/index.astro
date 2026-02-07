@@ -1,9 +1,9 @@
 ---
 // 1. The "Frontmatter" (Server-Side Logic) goes between these fences
 import Layout from "../layouts/Layout.astro";
-import { LandingPage } from "../components/LandingPage"; // Import the React file you just reverted
+import LandingPage from "@/components/LandingPage.svelte"; // Import the React file you just reverted
 ---
 
 <Layout title="Sean Duffie | Portfolio">
-  <LandingPage client:load />
+  <LandingPage />
 </Layout>

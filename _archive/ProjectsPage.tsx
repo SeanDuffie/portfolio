@@ -22,7 +22,7 @@ export function ProjectsPage() {
   });
 
   return (
-    <div className="min-h-screen py-24 px-4">
+    <div className="min-h-screen py-24 px-4 font-serif">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 text-center">
           <h1 className="mb-4 text-foreground">Projects</h1>
@@ -97,24 +97,35 @@ export function ProjectsPage() {
                       </Badge>
                     )}
                   </div>
-                  
-                  <div className="flex gap-2">
-                    {project.githubLink && (
-                      <Button asChild variant="outline" size="sm" className="flex-1 gap-2">
-                        <a href={project.githubLink}>
+                  <div className="relative z-10">
+                    <div className="flex gap-2">
+                      {project.githubLink ? (
+                        <Button asChild variant="outline" size="sm" className="flex-1 gap-2">
+                          <a href={project.githubLink}>
+                            <Github className="w-4 h-4" />
+                            Code
+                          </a>
+                        </Button>
+                      ) : (
+                        <Button disabled variant="outline" size="sm" className="flex-1 gap-2">
                           <Github className="w-4 h-4" />
-                          Code
-                        </a>
-                      </Button>
-                    )}
-                    {project.externalLink && (
-                      <Button asChild size="sm" className="flex-1 gap-2">
-                        <a href={project.externalLink}>
+                          No Code Available
+                        </Button>
+                      )}
+                      {project.externalLink ? (
+                        <Button asChild size="sm" className="flex-1 gap-2">
+                          <a href={project.externalLink}>
+                            <ExternalLink className="w-4 h-4" />
+                            Demo
+                          </a>
+                        </Button>
+                      ) : (
+                        <Button disabled size="sm" className="flex-1 gap-2">
                           <ExternalLink className="w-4 h-4" />
-                          Demo
-                        </a>
-                      </Button>
-                    )}
+                          No Demo Available
+                        </Button>
+                      )}
+                    </div>
                   </div>
                 </div>
               </Card>

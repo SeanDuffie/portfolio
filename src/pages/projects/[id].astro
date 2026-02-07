@@ -1,7 +1,7 @@
 ---
 // src/pages/projects/[id].astro
 import Layout from "@/layouts/Layout.astro";
-import { ProjectDetailPage } from "@/components/ProjectDetailPage";
+import ProjectDetailPage from "@/components/ProjectDetailPage.svelte";
 import { projects } from "@/data/projects";
 
 // 1. GENERATE PATHS
@@ -19,5 +19,5 @@ const { project } = Astro.props;
 ---
 
 <Layout title={`${project.title} | Projects`}>
-  <ProjectDetailPage client:idle project={project} />
+  <ProjectDetailPage project={project} />
 </Layout>
