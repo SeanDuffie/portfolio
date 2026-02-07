@@ -7,6 +7,7 @@
   const featuredProjects = projects.slice(0, 3);
 </script>
 
+<!-- Hero Section -->
 <div class="min-h-screen">
   <section class="relative h-[90vh] flex items-center justify-center overflow-hidden font-serif">
     <div class="absolute inset-0 z-0">
@@ -48,13 +49,14 @@
     </div>
   </section>
 
+  <!-- About Me Section -->
   <section class="py-20 px-4 font-serif">
     <div class="max-w-4xl mx-auto">
       <h2 class="mb-4 text-center text-foreground text-xl font-extrabold">About Me</h2>
       <div class="grid md:grid-cols-2 gap-8 items-center">
         <div>
           {#each landing.aboutMe as paragraph}
-            <p class="mb-4 text-gray-300">
+            <p class="mb-4 text-muted-foreground">
               {paragraph}
             </p>
           {/each}
@@ -82,6 +84,7 @@
     </div>
   </section>
 
+  <!-- Featured Projects Section -->
   <section class="relative py-20 px-4 bg-secondary font-serif">
     <div class="absolute inset-0 bg-gradient-to-b from-background from-0% to-5% to-transparent"></div>
 
@@ -117,7 +120,7 @@
       <div class="text-center">
         <a 
           href="./projects"
-          class="inline-flex items-center justify-center rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-8 bg-background/60 hover:bg-background border border-background/80 text-white/80 hover:text-white font-semibold shadow-lg"
+          class="inline-flex items-center justify-center rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-8 bg-background/60 hover:bg-background border border-background/80 text-foreground/80 hover:text-foreground font-semibold shadow-lg"
         >
           View All Projects
           <ArrowRight class="w-4 h-4 ml-2" />
@@ -128,6 +131,7 @@
     <div class="absolute inset-0 z-0 bg-gradient-to-b from-transparent from-95% to-background"></div>
   </section>
 
+  <!-- Contact Section -->
   <section class="py-16 px-4 transition-colors duration-200 font-serif">
     <div class="max-w-2xl mx-auto text-center">
       <h2 class="mb-4 text-center text-foreground text-xl font-extrabold">Let's Connect</h2>
@@ -139,7 +143,7 @@
         <a 
           href={`mailto:${landing.email}`} 
           target="_blank"
-          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 gap-2 text-white/80 hover:text-white shadow-lg"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 gap-2 text-foreground/80 hover:text-foreground shadow-lg"
         >
           <Mail class="w-5 h-5" />
           Email
@@ -148,7 +152,7 @@
           href={landing.linkedin} 
           target="_blank"
           rel="preload"
-          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 gap-2 text-white/80 hover:text-white shadow-lg"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 gap-2 text-foreground/80 hover:text-foreground shadow-lg"
         >
           <Linkedin class="w-5 h-5" />
           LinkedIn
@@ -157,7 +161,7 @@
           href={landing.github} 
           target="_blank"
           rel="preload"
-          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 gap-2 text-white/80 hover:text-white shadow-lg"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 gap-2 text-foreground/80 hover:text-foreground shadow-lg"
         >
           <Github class="w-5 h-5" />
           GitHub
@@ -166,7 +170,7 @@
       
       <a 
         href="./schedule"
-        class="inline-flex items-center justify-center rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 text-white/80 hover:text-white font-semibold shadow-lg"
+        class="inline-flex items-center justify-center rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 text-foreground/80 hover:text-foreground font-semibold shadow-lg"
       >
         Schedule a Meeting
         <Calendar class="w-4 h-4 ml-2" />

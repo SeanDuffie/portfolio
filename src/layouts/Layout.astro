@@ -2,7 +2,7 @@
 // src/layouts/Layout.astro
 import "@/styles/globals.css";
 import Navigation from "@/components/Navigation.svelte"; // Assuming you port Nav to Svelte
-import  SpeedInsights  from "@vercel/speed-insights/astro"
+import SpeedInsights from "@vercel/speed-insights/astro";
 
 const { title } = Astro.props;
 const currentPath = Astro.url.pathname; // Gets the current URL (e.g., "/projects")
@@ -12,9 +12,15 @@ const currentPath = Astro.url.pathname; // Gets the current URL (e.g., "/project
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sean Duffie's Engineering Portfolio Website" />
+    <meta
+      name="description"
+      content="Sean Duffie's Engineering Portfolio Website"
+    />
     <meta name="author" content="Sean Duffie" />
-    <meta name="keywords" content="Sean Duffie, Embedded Software Engineer, Portfolio" />
+    <meta
+      name="keywords"
+      content="Sean Duffie, Embedded Software Engineer, Portfolio"
+    />
     <meta name="robots" content="index, follow" />
     <title>{title}</title>
     <link rel="icon" href="img/Hawaii Icon 1.webp" type="image/x-icon" />

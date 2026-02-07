@@ -31,7 +31,7 @@ export const projects: Project[] = [
     title: "Portfolio Webpage",
     subtitle:
       "Fast and Responsive website using astro to display my Engineering Portfolio and other career ",
-    heroImage: "./img/23-05-12_SMD_TAMU_GradPix_035_b_lossy80.webp",
+    heroImage: "/img/23-05-12_SMD_TAMU_GradPix_035_b_lossy80.webp",
     description: "A comprehensive e-commerce platform built with Next.js...",
     youtubeVideoId: "dQw4w9WgXcQ",
     externalLink: "https://astro-portfolio-sean-duffie.vercel.app/",
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     title: "Wordle Discord Bot",
     subtitle:
       "Automatic Wordle solver that has an option to integrate into a Discord Server",
-    heroImage: "./img/wordle_example.png",
+    heroImage: "/img/wordle_example.png",
     description: "A comprehensive e-commerce platform built with Next.js...",
     // youtubeVideoId: null, // dQw4w9WgXcQ
     // externalLink: null,
@@ -105,7 +105,7 @@ export const projects: Project[] = [
     title: "Portfolio Webpage",
     subtitle:
       "Fast and Responsive website using astro to display my Engineering Portfolio and other career ",
-    heroImage: "./img/23-05-12_SMD_TAMU_GradPix_035_b_lossy80.webp",
+    heroImage: "/img/23-05-12_SMD_TAMU_GradPix_035_b_lossy80.webp",
     description: "A comprehensive e-commerce platform built with Next.js...",
     // youtubeVideoId: null,
     // externalLink: null,
@@ -141,7 +141,7 @@ export const projects: Project[] = [
     title: "Portfolio Webpage",
     subtitle:
       "Fast and Responsive website using astro to display my Engineering Portfolio and other career ",
-    heroImage: "./img/23-05-12_SMD_TAMU_GradPix_035_b_lossy80.webp",
+    heroImage: "/img/23-05-12_SMD_TAMU_GradPix_035_b_lossy80.webp",
     description: "A comprehensive e-commerce platform built with Next.js...",
     // youtubeVideoId: null, // dQw4w9WgXcQ
     // externalLink: null,
@@ -177,7 +177,7 @@ export const projects: Project[] = [
     title: "Portfolio Webpage",
     subtitle:
       "Fast and Responsive website using astro to display my Engineering Portfolio and other career ",
-    heroImage: "./img/23-05-12_SMD_TAMU_GradPix_035_b_lossy80.webp",
+    heroImage: "/img/23-05-12_SMD_TAMU_GradPix_035_b_lossy80.webp",
     description: "A comprehensive e-commerce platform built with Next.js...",
     // youtubeVideoId: null, // dQw4w9WgXcQ
     // externalLink: null,
