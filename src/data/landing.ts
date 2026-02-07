@@ -28,7 +28,7 @@ export const landing: LandingPage = {
   heroPath: "/img/23-05-12_SMD_TAMU_GradPix_035_b_lossy80.webp",
   heading: "Howdy, I'm Sean Duffie!",
   subHeading:
-    "I\'m an Embedded Software Engineer with a passion for optimization and innovation.</br>Let\'s build something amazing together.",
+    "I\'m an Embedded Software Engineer with a passion for optimization and innovation. \nLet\'s build something amazing together.",
   resumePath: "/Resume/Duffie_Sean_Resume.pdf",
 
   aboutMe: [

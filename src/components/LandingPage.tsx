@@ -34,10 +34,10 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
         </div>
         
         <div className="relative z-10 text-shadow-lg/90 text-center px-4 max-w-5xl mx-auto">
-          <h1 className="text-6xl text-white mb-4 font-extrabold">
+          <h1 className="text-4xl text-white mb-4 font-extrabold">
             {landing.heading}
           </h1>
-          <p className="text-2xl text-shadow-lg/90 text-white/90 mb-8 font-bold">
+          <p className="text-l text-shadow-lg/90 text-white/90 mb-8 font-bold whitespace-pre-line">
             {landing.subHeading}
           </p>
           <div className="flex gap-3 justify-center">
@@ -106,7 +106,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
         {/* Top Gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-background from-0% to-5% to-transparent" />
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <h2 className="mb-4 text-primary text-center text-xl font-extrabold">Featured Projects</h2>
             <p className="text-muted-foreground">
@@ -116,8 +116,8 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
           
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {featuredProjects.map((project) => (
-              <Card key={project.id} className="p-6 transition-shadow bg-card/80 hover:bg-card hover:shadow-xl border-gray-700">
-                <a href={`./projects/${project.id}`}>
+              <Card key={project.id} className="transition-shadow bg-card/80 hover:bg-card hover:shadow-xl border-gray-700">
+                <a href={`./projects/${project.id}`} className='p-6 relative inset-0' aria-label={`View ${project.title}`}>
                   {/* FIXME: Update the top left image to be a logo or profile picture */}
                   <div className="w-12 h-12 bg-accent rounded-lg mb-4 flex items-center justify-center">
                     <ExternalLink className="w-6 h-6 text-foreground" />
@@ -155,7 +155,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
         </div>
 
         {/* Bottom Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent from-95% to-background" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent from-95% to-background" />
       </section>
 
       {/* Contact Section */}
