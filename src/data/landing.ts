@@ -1,9 +1,6 @@
 // src/data/siteData.ts
 
-export interface LandingPage {
-  iconPath: string; // The URL of the icon image (local path or CDN URL)
-  pageTitle: string; // The text displayed on the browser tab
-
+export interface LandingData {
   heroPath: string; // The URL of the hero image (local path or CDN URL)
   heading: string; // The "Hello, my name is!" text
   subHeading: string; // The "What I do" text
@@ -21,10 +18,7 @@ export interface LandingPage {
   currentYear: string;
 }
 
-export const landing: LandingPage = {
-  iconPath: "/img/Hawaii Icon 1.webp", // FIXME: This is not currently being used
-  pageTitle: "Sean Duffie | Portfolio",
-
+export const landing: LandingData = {
   heroPath: "/img/23-05-12_SMD_TAMU_GradPix_035_b_lossy80.webp",
   heading: "Howdy, I'm Sean Duffie!",
   subHeading:
@@ -32,9 +26,9 @@ export const landing: LandingPage = {
   resumePath: "/Resume/Duffie_Sean_Resume.pdf",
 
   aboutMe: [
-    "I'm a maker at heart, and have had 5+ years of professional engineering experience.",
-    "My expertise lies in React, Next.js, TypeScript, and Node.js. I'm constantly learning and staying up-to-date with the latest trends in web development.",
-    "When I'm not coding, you can find me contributing to open-source projects, writing technical blog posts, or exploring new technologies.",
+    "I'm a maker at heart, and have had 5+ years of professional engineering experience. I'm currently working as a C++ Software Engineer at Leidos, while I finish my Master's degree in Computer Science at Georgia Tech.",
+    "I have a strong background in embedded systems, and I would consider myself a Jack of all trades. I've worked with PCB design, Signal Processing, Embedded Software Development, and System Integration. I've even dabbled in 3D Modeling, 3D Printing, and Robotics. I'm constantly learning and staying up-to-date with the latest trends in the broader engineering landscape.",
+    "When I'm not at work, you could find me contributing to open-source projects, working on woodworking projects, or developing my automated home garden.",
   ],
 
   featuredIntro:
@@ -42,7 +36,7 @@ export const landing: LandingPage = {
   featuredProjects: [1, 2, 3],
 
   contactIntro:
-    "Feel free to reach out for collaborations or just a friendly hello",
+    "Feel free to reach out for collaborations or just to establish a connection! I'm always open to discussing new opportunities and ideas.",
   email: "duffiesean@gmail.com",
   github: "https://github.com/SeanDuffie",
   linkedin: "https://www.linkedin.com/in/sean-duffie",
