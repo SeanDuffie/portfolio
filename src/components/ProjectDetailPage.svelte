@@ -42,37 +42,59 @@
   }
 </script>
 
-<div class="min-h-screen bg-background">
-  <div class="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b transition-colors duration-200">
-    <div class="max-w-7xl mx-auto px-4 py-4">
-      <a 
-        href="/projects" 
-        class="inline-flex items-center justify-center rounded-md text-sm font-medium hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-2 text-foreground transition-colors"
-      >
-        <ArrowLeft class="w-4 h-4" />
+<div class="min-h-screen">
+
+  <section class="relative h-[75vh] items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img
+        src={project.heroImage}
+        alt={project.title}
+        class="w-full h-full object-cover"
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent from-30% to-background"></div>
+      <!-- <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div> -->
+    </div>
+
+    <div class="max-w-4xl mx-auto pt-24 px-4 sm:px-6">
+        <nav class="mb-6 flex items-center text-sm text-gray-500">
+      <a href="/projects" class="flex items-center hover:text-blue-600 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
         Back to Projects
       </a>
-    </div>
-  </div>
+    </nav>
 
-  <section class="relative h-[60vh] overflow-hidden">
-    <img
-      src={project.heroImage}
-      alt={project.title}
-      class="w-full h-full object-cover"
-    />
-    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+    <h1 class="text-3xl font-bold">{project.title}</h1>
+    </div>
+    
+    <div class="absolute top-20 left-0 z-50">
+        <div class="max-w-7xl mx-auto">
+        <a 
+        href="/projects" 
+        class="relative z-10 inline-flex rounded-md text-sm font-medium hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-2 text-foreground transition-colors"
+        >
+        <ArrowLeft class="w-4 h-4" />
+        Back to Projects
+        </a>
+        </div>
+    </div>
     
     <div class="absolute bottom-0 left-0 right-0 p-8">
       <div class="max-w-7xl mx-auto">
         <h1 class="text-4xl md:text-6xl font-extrabold text-foreground mb-4">{project.title}</h1>
         <p class="text-xl md:text-2xl text-muted-foreground max-w-3xl font-light">
-          {project.elevatorPitch || project.subtitle}
+          {project.elevatorPitch}
         </p>
         
         <div class="flex flex-wrap gap-4 mt-8">
           {#if project.externalLink}
-            <a href={project.externalLink} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 gap-2 shadow-lg">
+            <a
+              href={project.externalLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 gap-2 shadow-lg">
               <ExternalLink class="w-4 h-4" />
               Live Demo
             </a>
