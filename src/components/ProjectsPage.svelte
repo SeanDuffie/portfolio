@@ -12,7 +12,7 @@
     
     const matchesSearch = 
       project.title.toLowerCase().includes(query) ||
-      project.description.toLowerCase().includes(query) ||
+      project.elevatorPitch.toLowerCase().includes(query) ||
       project.tags.some(tag => tag.toLowerCase().includes(query));
     
     // Safety check: ensure technologies exist before filtering
@@ -84,7 +84,7 @@
             </a>
             
             <p class="text-sm text-muted-foreground mb-4 line-clamp-3 flex-1">
-              {project.description}
+              {project.elevatorPitch}
             </p>
             
             <div class="flex flex-wrap gap-2 mb-4">
